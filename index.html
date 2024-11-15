@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royaux Group 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes popUp {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      .animate-popUp {
+        animation: popUp 0.5s ease-out forwards;
+        opacity: 0;
+      }
+      body {
+        background-color: #f3f4f6;
+        background-image: radial-gradient(#cbd5e1 0.5px, transparent 0.5px),
+          radial-gradient(#cbd5e1 0.5px, #f3f4f6 0.5px);
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <header class="bg-gray-800 text-white py-12 mb-12">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-center">
+          Royaux Group 3
+        </h1>
+        <p class="text-gray-300 text-center mt-4 max-w-2xl mx-auto">
+          Meet our talented team of professionals dedicated to excellence and
+          innovation
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 pb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
+        >
+          <div class="aspect-[4/5] relative overflow-hidden">
+            <img
+              src="assets/Obed.jpg"
+              alt="Obed Webu"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600">Obed Webu</p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
+        >
+          <div class="aspect-[4/5] relative overflow-hidden">
+            <img
+              src="assets/Emmanuel.jpg"
+              alt="Emmanuel Acheampong"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600">Emmanuel Acheampong</p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
+        >
+          <div class="aspect-[4/5] relative overflow-hidden">
+            <img
+              src="assets/micheal-adei.jpg"
+              alt="Michael Addai"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600">Michael Addai</p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
+        >
+          <div class="aspect-[4/5] relative overflow-hidden">
+            <img
+              src="assets/Nada Hage.jpg"
+              alt="Nada Hage"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600">Nada Hage</p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
+        >
+          <div class="aspect-[4/5] relative overflow-hidden">
+            <img
+              src="assets/Margaret Baamah Patterson.jpg"
+              alt="Margaret Baamah Patterson"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600">Margaret Baamah Patterson</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
