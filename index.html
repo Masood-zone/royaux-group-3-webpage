@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Royaux Group 3</title>
+    <title>Royaux Team - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <style>
       @keyframes fadeIn {
         from {
@@ -32,105 +41,246 @@
         opacity: 0;
       }
       body {
-        background-color: #f3f4f6;
-        background-image: radial-gradient(#cbd5e1 0.5px, transparent 0.5px),
-          radial-gradient(#cbd5e1 0.5px, #f3f4f6 0.5px);
+        background-color: #f0f4e8;
+        background-image: radial-gradient(#c1d5aa 0.5px, transparent 0.5px),
+          radial-gradient(#c1d5aa 0.5px, #f0f4e8 0.5px);
         background-size: 20px 20px;
         background-position: 0 0, 10px 10px;
       }
+
+      #playButton {
+        z-index: 10;
+      }
+      .group {
+        position: relative;
+      }
+
+      .group:hover::after {
+        content: "Click to enlarge";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        white-space: nowrap;
+      }
     </style>
   </head>
-  <body class="min-h-screen">
-    <header class="bg-gray-800 text-white py-12 mb-12">
-      <div class="container mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-bold text-center">
-          Royaux Group 3
-        </h1>
-        <p class="text-gray-300 text-center mt-4 max-w-2xl mx-auto">
-          Meet our talented team of professionals dedicated to excellence and
-          innovation
-        </p>
+  <body class="min-h-screen text-gray-800">
+    <nav class="bg-green-800 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold">Royaux Group</a>
+        <div>
+          <a href="index.html" class="mx-2 text-lg hover:text-green-200"
+            >Home</a
+          >
+          <a href="about-us.html" class="mx-2 text-lg hover:text-green-200"
+            >About Us</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Video Banner -->
+    <header class="container mx-auto px-4 h-full md:h-[calc(100dvh-64px)] py-5">
+      <div class="relative rounded-lg overflow-hidden h-full max-w-5xl mx-auto">
+        <video
+          src="assets/video/header-video.mp4"
+          alt="Header Video"
+          class="w-full h-full object-cover"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <button
+          id="playButton"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-75 rounded-full p-4 text-4xl text-green-800 hover:bg-opacity-100 transition-all duration-300"
+        >
+          <i class="fas fa-play"></i>
+        </button>
       </div>
     </header>
+    <!-- Design images -->
+    <main class="container mx-auto mt-12 px-4">
+      <section id="showcase" class="mb-16">
+        <div class="flex justify-center mb-8">
+          <button
+            id="designsTab"
+            class="px-14 py-3 bg-green-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            Designs
+          </button>
+          <button
+            id="buildTab"
+            class="px-14 py-3 bg-green-100 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            How it was built
+          </button>
+        </div>
+        <p class="text-xs text-center py-2">Click on the image to enlarge*</p>
+        <div
+          id="designsContent"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <img
+            src="assets/final-designs/final-1.jpg"
+            alt="Design 1"
+            class="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+          />
+          <img
+            src="assets/final-designs/final-2.jpg"
+            alt="Design 2"
+            class="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+          />
+          <img
+            src="assets/final-designs/final-3.jpg"
+            alt="Design 3"
+            class="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+          />
+        </div>
+        <div id="buildContent" class="hidden">
+          <h3 class="text-2xl font-bold mb-4">The Start</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <img
+              src="assets/start/start-1.jpg"
+              alt="Start 1"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/start/start-2.jpg"
+              alt="Start 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/start/start-3.jpg"
+              alt="Start 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/start/start-4.jpg"
+              alt="Start 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/start/start-5.jpg"
+              alt="Start 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/start/start-6.jpg"
+              alt="Start 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/start/start-7.jpg"
+              alt="Start 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Preview</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <img
+              src="assets/preview/preview-1.jpg"
+              alt="Preview 1"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/preview/preview-2.jpg"
+              alt="Preview 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer md:col-span-2"
+            />
+            <img
+              src="assets/preview/preview.jpg"
+              alt="Preview 3"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer md:col-span-2"
+            />
+            <img
+              src="assets/preview/design-preview (1).jpg"
+              alt="Preview 4"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Last Steps</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <img
+              src="assets/last-steps/last-steps-1.jpg"
+              alt="Last Step 1"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/last-steps/last-steps-2.jpg"
+              alt="Last Step 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/last-steps/last-steps-3.jpg"
+              alt="Last Step 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/last-steps/last-steps-4.jpg"
+              alt="Last Step 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+            <img
+              src="assets/last-steps/last-steps.jpg"
+              alt="Last Step 2"
+              class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Final Design</h3>
+          <div class="grid grid-cols-1 gap-4">
+            <img
+              src="assets/final-designs/final-4.jpg"
+              alt="Final Design"
+              class="w-full h-96 object-cover rounded-lg shadow-md cursor-pointer"
+            />
+          </div>
+        </div>
+      </section>
 
-    <main class="container mx-auto px-4 pb-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
+      <section id="cta" class="bg-green-100 rounded-lg p-8 text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Download Our Prompt Card</h2>
+        <p class="mb-6">
+          Get our exclusive Prompt Card PDF to enhance your creativity!
+        </p>
+        <a
+          href="assets/file/prompt-card.pdf"
+          download
+          class="bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300"
+          >Download PDF</a
         >
-          <div class="aspect-[4/5] relative overflow-hidden">
-            <img
-              src="assets/Obed.jpg"
-              alt="Obed Webu"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Obed Webu</p>
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
-        >
-          <div class="aspect-[4/5] relative overflow-hidden">
-            <img
-              src="assets/Emmanuel.jpg"
-              alt="Emmanuel Acheampong"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Emmanuel Acheampong</p>
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
-        >
-          <div class="aspect-[4/5] relative overflow-hidden">
-            <img
-              src="assets/micheal-adei.jpg"
-              alt="Michael Addai"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Michael Addai</p>
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
-        >
-          <div class="aspect-[4/5] relative overflow-hidden">
-            <img
-              src="assets/Nada Hage.jpg"
-              alt="Nada Hage"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Nada Hage</p>
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-popUp"
-        >
-          <div class="aspect-[4/5] relative overflow-hidden">
-            <img
-              src="assets/Margaret Baamah Patterson.jpg"
-              alt="Margaret Baamah Patterson"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600">Margaret Baamah Patterson</p>
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+      <div class="container mx-auto text-center">
+        <p class="text-2xl font-bold mb-2">Royaux Team</p>
+        <p>&copy; 2024 Royaux Team. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center"
+    >
+      <div
+        class="w-full max-w-4xl h-full max-h-[80vh] mx-auto p-4 flex items-center justify-center rounded-lg bg-gray-100 my-5"
+      >
+        <img
+          id="modalImage"
+          src=""
+          alt="Enlarged image"
+          class="max-w-full max-h-full object-contain rounded-lg"
+        />
+      </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
   </body>
 </html>
